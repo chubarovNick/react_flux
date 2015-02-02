@@ -4,7 +4,15 @@ var TodoLists = require('./todo-lists.react');
 
 var TodoApp = React.createClass({
     render: function () {
-        return (<TodoLists/>);
+        return (
+            <div class="todo-app">
+                <div className={"left-col"}>
+                    <TodoLists/>
+                </div>
+                <div className={"right-col"}>
+                </div>
+            </div>
+        );
     }
 });
 

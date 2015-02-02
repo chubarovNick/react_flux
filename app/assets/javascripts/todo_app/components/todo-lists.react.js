@@ -25,9 +25,9 @@ var TodoLists = React.createClass({
         var items = _.keys(lists).map(function (id) {
             var todoList = lists[id];
             var url = '/todo_lists/' + todoList.id + '/todo_list_items';
-            return (<li><TodoList href={url} name={todoList.name}></TodoList></li>);
+            return (<TodoList todoList={todoList}/>);
         });
-        return (<ul>{items}</ul>);
+        return (<div class='list-group'>{items}</div>);
     },
     _onChange: function() {
         this.setState(getStateFromStores());

@@ -29,7 +29,6 @@ TodoListItemsStore.dispatchToken = TodoAppDispatcher.register(function (payload)
     var action = payload.action;
     switch (action.type) {
         case ActionTypes.CLICK_TODO_LIST:
-            alert('');
             break;
         case ActionTypes.CREATE_TODO_LIST_ITEM:
             break;

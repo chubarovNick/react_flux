@@ -5,8 +5,8 @@ var TodoConstants = require('todo_app/constants/todo-app-constants');
 var ActionTypes = TodoConstants.ActionTypes;
 var WebApiUtils = require('todo_app/utils/web-api-utils');
 var CHANGE_EVENT = 'change';
-var _todoLists = {}
-
+var _todoLists = {};
+var _cuurentListItemId;
 var TodoListsStore = assign({}, EventEmitter.prototype, {
     init: function () {
         var seerverLists = WebApiUtils.getAllTodoLists().forEach(function (list) {
@@ -27,6 +27,9 @@ var TodoListsStore = assign({}, EventEmitter.prototype, {
     },
     getAll: function () {
         return _todoLists;
+    },
+    getCurrentId: function (){
+        return _cuurentListItemId;
     }
 });
 
@@ -43,7 +46,8 @@ TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
     var action = payload.action;
     switch (action.type) {
         case ActionTypes.CLICK_TODO_LIST:
-            alert('');
+            _cuurentListItemId = action.todoListId;
+            TodoListsStore.emitChange();
             break;
         case ActionTypes.CREATE_TODO_LIST:
             break;
