@@ -11,5 +11,6 @@
  * file per style scope.
  *
  *= require bootstrap
+ *= require todo_app
  *= require_self
  */
