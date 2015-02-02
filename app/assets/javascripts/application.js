@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore
+//= require jquery.rest
 //= require_tree .
 $(document).ready(function () {
     var TodoApp = require('./todo_app/components/todo-app.react');

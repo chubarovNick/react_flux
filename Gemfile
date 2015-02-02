@@ -10,7 +10,6 @@ gem 'jquery-rails', '~> 4.0.0.beta2'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rails-backbone'
-
 gem 'browserify-rails', '~> 0.5'
 gem 'sprockets-commonjs'
 source 'https://rails-assets.org' do

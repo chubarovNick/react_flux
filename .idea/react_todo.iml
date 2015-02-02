@@ -153,7 +153,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.4.11, rbenv: 2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v5.0.1, rbenv: 2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, rbenv: 2.1.2) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="slim (v3.0.1, rbenv: 2.1.2) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="slim (v3.0.2, rbenv: 2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="slop (v3.6.0, rbenv: 2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="spring (v1.2.0, rbenv: 2.1.2) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.9.4, rbenv: 2.1.2) [gem]" level="application" />
