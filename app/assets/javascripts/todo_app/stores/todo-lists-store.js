@@ -49,8 +49,9 @@ TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
             break;
         case ActionTypes.RECEIVE_ALL_TODO_LISTS:
             _addTodoLists(payload.rawLists);
-            break;
             TodoListsStore.emitChange();
+            break;
+
         default:
 
     }
