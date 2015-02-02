@@ -3,11 +3,16 @@ var assign = require('object-assign');
 var EventEmitter = require('events').EventEmitter;
 var TodoConstants = require('todo_app/constants/todo-app-constants');
 var ActionTypes = TodoConstants.ActionTypes;
-
+var WebApiUtils = require('todo_app/utils/web-api-utils');
 var CHANGE_EVENT = 'change';
 var _todoLists = {}
 
 var TodoListsStore = assign({}, EventEmitter.prototype, {
+    init: function () {
+        var seerverLists = WebApiUtils.getAllTodoLists().forEach(function (list) {
+            _todoLists[list.id] = list
+        });
+    },
     emitChange: function () {
         this.emit(CHANGE_EVENT);
     },

@@ -14,3 +14,14 @@
 //= require jquery_ujs
 //= require underscore
 //= require_tree .
+$(document).ready(function () {
+    var TodoApp = require('./todo_app/components/todo-app.react');
+    var TodoListStore = require('./todo_app/stores/todo-lists-store');
+    TodoListStore.init()
+    console.log(TodoListStore.getAll())
+    var React = require('react');
+    window.React = React; // export for http://fb.me/react-devtools
+
+    React.render(React.createElement(TodoApp, null), document.getElementById('todos'));
+})
+
