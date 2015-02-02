@@ -1,0 +1,14 @@
+default: &default  
+  adapter: postgresql
+  encoding: utf8
+  username: postgres
+  host: localhost
+  pool: 5
+
+development:  
+  <<: *default
+  database: demo_development
+
+test:  
+  <<: *default
+  database: demo_test
