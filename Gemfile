@@ -13,6 +13,8 @@ gem 'rails-backbone'
 gem 'browserify-rails', '~> 0.5'
 gem 'sprockets-commonjs'
 gem 'responders', '~> 2.0'
+gem 'thunderer'
+gem 'thin'
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-object-assign'

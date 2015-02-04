@@ -1,7 +1,10 @@
 class TodoListItemsController < ApplicationController
+  include Thunderer::ControllerAdditions
   expose(:todo_list)
   expose(:todo_list_items, ancestor: :todo_list)
   expose(:todo_list_item)
+
+  thunderer_channels '/todo_lists/:id/todo_list_items', object: :todo_list
 
   respond_to :html, :json
 
