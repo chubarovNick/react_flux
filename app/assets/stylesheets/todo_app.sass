@@ -1,26 +1,30 @@
 #todos
-  .col-md-9
-    .todo-list-items
-      .todo-list-item
-        list-style: none
-        .panel
-          margin-bottom: 5px
-        h4
-          display: inline
-        .done-button
-          padding: 0 5px
+  .todo-list-items
+    float: right
+    width: 75%
+    .todo-list-item
+      list-style: none
+      .panel
+        margin-bottom: 5px
+      h4
+        display: inline
+      .done-button
+        padding: 0 5px
+      .remove-button
+        margin-left: 80%
+        cursor: pointer
+        opacity: 0
+        transition: opacity 0.2s
+      &:hover
         .remove-button
-          margin-left: 80%
-          cursor: pointer
-          opacity: 0
-          transition: opacity 0.2s
-        &:hover
-          .remove-button
-            opacity: 1
-  .col-md-3
+          opacity: 1
+  .lists-block
     float: left
+    width: 100%
+    &.selected
+      transition: width 0.5s
+      width: 25%
     .list-group
-      width: 100%
       .list-group-item
         .remove-button
           float: right
@@ -30,6 +34,4 @@
         &:hover
           .remove-button
             opacity: 1
-      &.selected
-        width: 200px
-        transition: width 0.5s
+

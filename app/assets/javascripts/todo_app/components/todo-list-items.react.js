@@ -26,7 +26,7 @@ var TodoListItems = React.createClass({
         return (
           <div className="todo-list-items">
             <ul>
-              <li>
+              <li className={React.addons.classSet({hidden: !TodoListsStore.getCurrentId()})}>
                 <TodoTextInput id="new-todo-list-item" placeholder='New todo' onSave={this._onSave} className={'form-control'}/>
               </li>
               {uiItems}

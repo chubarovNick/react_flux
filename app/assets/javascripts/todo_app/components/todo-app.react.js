@@ -7,12 +7,8 @@ var TodoApp = React.createClass({
     render: function () {
         return (
             <div class="todo-app">
-                <div className={"col-md-3"}>
-                    <TodoLists/>
-                </div>
-                <div className={"col-md-9"}>
-                    <TodoListItems/>
-                </div>
+                <TodoLists/>
+                <TodoListItems/>
             </div>
         );
     }

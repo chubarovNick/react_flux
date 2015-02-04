@@ -47,7 +47,11 @@ TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
     var action = payload.action;
     switch (action.type) {
         case ActionTypes.CLICK_TODO_LIST:
-            _cuurentListItemId = action.todoListId;
+            if (action.todoListId == _cuurentListItemId){
+                _cuurentListItemId = undefined;
+            }else{
+                _cuurentListItemId = action.todoListId;
+            }
             TodoListsStore.emitChange();
             break;
         case ActionTypes.CREATE_TODO_LIST:

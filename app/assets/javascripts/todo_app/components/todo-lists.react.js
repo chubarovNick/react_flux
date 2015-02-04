@@ -34,20 +34,23 @@ var TodoLists = React.createClass({
             return (<TodoList key={id} todoList={todoList}/>);
         });
         return (
-            <ul class='list-group' className={React.addons.classSet({selected: TodoListsStore.getCurrentId(), 'list-group':true })}>
-                <li class='list-group-item'>
-                  <TodoTextInput id="new-todo-list" placeholder='New list' onSave={this._onSave} className={'form-control'}/>
-                </li>
+            <div className={React.addons.classSet({selected: TodoListsStore.getCurrentId(), 'lists-block': true})}>
+                <ul className="list-group">
+                    <li className='list-group-item'>
+                        <TodoTextInput id="new-todo-list" placeholder='New list' onSave={this._onSave} className={'form-control'}/>
+                    </li>
                 {items}
-            </ul>);
+                </ul>
+            </div>
+        );
     },
     _onChange: function () {
         this.setState(getStateFromStores());
     },
     _onSave: function (text) {
-      if(text.trim()){
-        TodoListActions.create(text);
-      }
+        if (text.trim()) {
+            TodoListActions.create(text);
+        }
     }
 });
 
