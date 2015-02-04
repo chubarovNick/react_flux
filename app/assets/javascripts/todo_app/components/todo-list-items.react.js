@@ -2,6 +2,10 @@
 var React = require('react');
 var TodoListItem = require('../components/todo-list-item.react');
 var TodoListItemsStore  = require('../../todo_app/stores/todo-list-items-store');
+var TodoTextInput = require('./todo-text-input.react');
+var TodoListItemsActions = require('../../todo_app/actions/todo-list-item-action-creators')
+var TodoListsStore = require('../../todo_app/stores/todo-lists-store');
+
 
 var TodoListItems = React.createClass({
     getDefaultProps: function () {
@@ -19,10 +23,25 @@ var TodoListItems = React.createClass({
         var uiItems = _.keys(listItems).map(function (id) {
             return (<TodoListItem listItem={listItems[id]}/>)
         });
-        return (<div>{uiItems}</div>);
+        return (
+          <div className="todo-list-items">
+            <ul>
+              <li>
+                <TodoTextInput id="new-todo-list-item" placeholder='New todo' onSave={this._onSave} className={'form-control'}/>
+              </li>
+              {uiItems}
+            </ul>
+          </div>
+          );
     },
     _onChange: function () {
         this.setState({});
+    },
+    _onSave: function (name) {
+      var todoListId = TodoListsStore.getCurrentId();
+      if (name.trim()){
+        TodoListItemsActions.cerateTodoListItem(name, todoListId);
+      }
     }
 });
 

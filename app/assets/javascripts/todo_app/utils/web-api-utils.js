@@ -54,5 +54,13 @@ module.exports = {
     destroyTodoList: function (id) {
       var result = deleteData('/todo_lists/' + id +'.json')
       return result;
+    },
+    createTodoListItem: function (name, todoListId) {
+      var url = '/todo_lists/' + todoListId + '/todo_list_items.json'
+      return postData(url,{todo_list_item: {text: name}});
+    },
+    deleteTodoListItem: function (id, todoListId) {
+      var url = '/todo_lists/' + todoListId + '/todo_list_items/' + id +'.json'
+      return deleteData(url);
     }
 }

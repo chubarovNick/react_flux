@@ -37,6 +37,12 @@ TodoListItemsStore.dispatchToken = TodoAppDispatcher.register(function (payload)
             TodoListItemsStore.emitChange();
             break;
         case ActionTypes.CREATE_TODO_LIST_ITEM:
+            _todoListItems[action.todoListItem.id] = action.todoListItem;
+            TodoListItemsStore.emitChange();
+            break;
+        case ActionTypes.DELETE_TODO_LIST_ITEM:
+            delete _todoListItems[action.id];
+            TodoListItemsStore.emitChange();
             break;
         default:
 
