@@ -7,6 +7,7 @@ var WebApiUtils = require('todo_app/utils/web-api-utils');
 var CHANGE_EVENT = 'change';
 var _todoLists = {};
 var _cuurentListItemId;
+
 var TodoListsStore = assign({}, EventEmitter.prototype, {
     init: function () {
         var seerverLists = WebApiUtils.getAllTodoLists().forEach(function (list) {
@@ -50,12 +51,17 @@ TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
             TodoListsStore.emitChange();
             break;
         case ActionTypes.CREATE_TODO_LIST:
+            _todoLists[action.todoList.id] = action.todoList;
+            TodoListsStore.emitChange();
             break;
         case ActionTypes.RECEIVE_ALL_TODO_LISTS:
             _addTodoLists(payload.rawLists);
             TodoListsStore.emitChange();
             break;
-
+        case ActionTypes.DELETE_TODO_LIST:
+            delete _todoLists[action.id];
+            TodoListsStore.emitChange();
+            break;
         default:
 
     }

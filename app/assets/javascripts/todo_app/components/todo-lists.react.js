@@ -2,6 +2,8 @@
 var React = require('react');
 var TodoList = require('../components/todo-list.react');
 var TodoListsStore = require('../../todo_app/stores/todo-lists-store');
+var TodoTextInput = require('./todo-text-input.react');
+var TodoListActions = require('../../todo_app/actions/todo-list-action-creators')
 require('react/addons');
 
 var ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
@@ -25,25 +27,28 @@ var TodoLists = React.createClass({
         TodoListsStore.removeChangeListener(this._onChange);
     },
     render: function () {
-        var lists = this.props.lists;
+        var lists = TodoListsStore.getAll();
+        console.log(lists);
         var items = _.keys(lists).map(function (id) {
             var todoList = lists[id];
-            var url = '/todo_lists/' + todoList.id + '/todo_list_items';
             return (<TodoList key={id} todoList={todoList}/>);
         });
         return (
-            <div class='list-group' className={React.addons.classSet({selected: TodoListsStore.getCurrentId(), 'list-group':true })}>
-                <ReactCSSTransitionGroup transitionName='example'>
-                    {items}
-                </ReactCSSTransitionGroup>
-            </div>);
+            <ul class='list-group' className={React.addons.classSet({selected: TodoListsStore.getCurrentId(), 'list-group':true })}>
+                <li class='list-group-item'>
+                  <TodoTextInput id="new-todo-list" placeholder='New list' onSave={this._onSave} className={'form-control'}/>
+                </li>
+                {items}
+            </ul>);
     },
     _onChange: function () {
         this.setState(getStateFromStores());
+    },
+    _onSave: function (text) {
+      if(text.trim()){
+        TodoListActions.create(text);
+      }
     }
 });
 
 module.exports = TodoLists;
-
-
-
