@@ -1,3 +1,13 @@
+.item-enter
+  opacity: 0.01
+  transition: opacity 1s ease-in
+  &.item-enter-active
+    opacity: 1
+.item-leave
+  transition: opacity 0.5s ease-in
+  opacity: 1
+  &.item-leave-active
+    opacity: 0.01
 #todos
   .todo-list-items
     float: right
