@@ -31,7 +31,6 @@ function deleteData(url) {
     url: url,
     success: function () {
       result = true;
-      console.log('Delete success');
     },
     async: false
   })

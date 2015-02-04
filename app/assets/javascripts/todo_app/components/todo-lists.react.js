@@ -28,7 +28,6 @@ var TodoLists = React.createClass({
     },
     render: function () {
         var lists = TodoListsStore.getAll();
-        console.log(lists);
         var items = _.keys(lists).map(function (id) {
             var todoList = lists[id];
             return (<TodoList key={id} todoList={todoList}/>);

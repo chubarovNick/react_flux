@@ -19,8 +19,6 @@ module.exports = {
     },
     destroy: function (id) {
       var success = WebApiUtils.destroyTodoList(id);
-      console.log('Delete');
-      console.log(success);
 
       if (success){
         TodoAppDispatcher.handleViewAction({

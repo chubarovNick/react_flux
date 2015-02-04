@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c641cbb1-d760-47cc-881c-3d0c9fc8dc55" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass" afterPath="$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="react_todo.iws" />
@@ -33,49 +37,41 @@
       <file leaf-file-name="todo-lists.react.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1197">
-              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1178">
+              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo-lists-store.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/stores/todo-lists-store.js">
+      <file leaf-file-name="web-api-utils.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1520">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6328829" vertical-offset="346" max-vertical-offset="1349">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo-list-items.react.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js">
+      <file leaf-file-name="todo_app.sass" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.20495495" vertical-offset="403" max-vertical-offset="1064">
-              <caret line="26" column="114" selection-start-line="26" selection-start-column="114" selection-end-line="26" selection-end-column="114" />
+            <state vertical-scroll-proportion="-3.064516" vertical-offset="0" max-vertical-offset="855">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="todo-app.react.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-app.react.js">
+      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="456">
-              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="todo-list.react.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list.react.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="817">
-              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="627">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +79,8 @@
       <file leaf-file-name="todo-list-action-creators.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="684">
+              <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -136,7 +132,6 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-app.js.jsx" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/app/views/todo_lists/index.html.slim" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/vendor/assets/javascripts/jquery.rest.js" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.slim" />
@@ -144,16 +139,17 @@
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list.react.js" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/todo_app.css" />
         <option value="$PROJECT_DIR$/config/application.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js" />
         <option value="$PROJECT_DIR$/app/controllers/todo_list_items_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/stores/todo-list-items-store.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-item.react.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-app.react.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/stores/todo-lists-store.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js" />
       </list>
     </option>
   </component>
@@ -483,7 +479,13 @@
       <option name="project" value="LOCAL" />
       <updated>1423072486637</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Improve ui">
+      <created>1423073370755</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1423073370755</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -559,7 +561,8 @@
     <MESSAGE value="Add animation" />
     <MESSAGE value="New styles" />
     <MESSAGE value="Toggle selection&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toggle selection&#10;" />
+    <MESSAGE value="Improve ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Improve ui" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -772,13 +775,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44952682" vertical-offset="0" max-vertical-offset="646">
-          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/assets/javascripts/jquery.rest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.059936907" vertical-offset="0" max-vertical-offset="634">
@@ -830,13 +826,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7702703" vertical-offset="0" max-vertical-offset="513">
-          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/todo_lists_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08558559" vertical-offset="0" max-vertical-offset="444">
@@ -875,58 +864,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1197">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list.react.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="164" max-vertical-offset="817">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="722">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.29054055" vertical-offset="403" max-vertical-offset="1064">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/stores/todo-lists-store.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1520">
+        <state vertical-scroll-proportion="0.3243243" vertical-offset="882" max-vertical-offset="1520">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27602905" vertical-offset="209" max-vertical-offset="817">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-app.react.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="456">
+        <state vertical-scroll-proportion="0.4009009" vertical-offset="12" max-vertical-offset="456">
           <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list-items.react.js">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-list.react.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20495495" vertical-offset="403" max-vertical-offset="1064">
-          <caret line="26" column="114" selection-start-line="26" selection-start-column="114" selection-end-line="26" selection-end-column="114" />
+        <state vertical-scroll-proportion="0.14414415" vertical-offset="164" max-vertical-offset="817">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/todo_app.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.064516" vertical-offset="0" max-vertical-offset="855">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="627">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/actions/todo-list-action-creators.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="684">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/components/todo-lists.react.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1178">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/todo_app/utils/web-api-utils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6328829" vertical-offset="346" max-vertical-offset="1349">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
         </state>
       </provider>
