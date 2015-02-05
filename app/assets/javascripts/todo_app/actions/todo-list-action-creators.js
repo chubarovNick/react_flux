@@ -5,9 +5,11 @@ var WebApiUtils = require('todo_app/utils/web-api-utils');
 
 module.exports = {
     clickList: function(listId){
+        var todoListItems = WebApiUtils.getAllTodoListItems(listId);
         TodoAppDispatcher.handleViewAction({
             type: ActionTypes.CLICK_TODO_LIST,
-            todoListId: listId
+            todoListId: listId,
+            todoListItems: todoListItems
         })
     },
     create: function (text) {

@@ -31,7 +31,7 @@ TodoListItemsStore.dispatchToken = TodoAppDispatcher.register(function (payload)
     switch (action.type) {
         case ActionTypes.CLICK_TODO_LIST:
             _todoListItems = {};
-            WebApiUtils.getAllTodoListItems(action.todoListId).forEach(function(item){
+            action.todoListItems.forEach(function(item){
                _todoListItems[item.id] = item;
             });
             TodoListItemsStore.emitChange();
