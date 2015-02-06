@@ -38,12 +38,26 @@
       width: 25%
     .list-group
       .list-group-item
+        .edit-input
+          display: none
+        &.editing
+          h4
+            display: none
+          .edit-input
+            display: block
+        .edit-button
+          float: right
+          cursor: pointer
+          opacity: 0
+          transition: opacity 0.2s
         .remove-button
           float: right
           cursor: pointer
           opacity: 0
           transition: opacity 0.2s
         &:hover
+          .edit-button
+            opacity: 1
           .remove-button
             opacity: 1
 

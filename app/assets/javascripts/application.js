@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require underscore
 //= require jquery.rest
+//= require faye
 //= require thunderer
 //= require_tree .
 $(document).ready(function () {

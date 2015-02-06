@@ -1,6 +1,6 @@
 class TodoListsController < ApplicationController
   expose(:todo_lists)
-  expose(:todo_list)
+  expose(:todo_list,config: :strong, attributes: :list_params)
 
   respond_to :html, :json
 
@@ -12,6 +12,11 @@ class TodoListsController < ApplicationController
   def destroy
     todo_list = TodoList.find(params[:id])
     todo_list.destroy
+    respond_with(todo_list)
+  end
+
+  def update
+    todo_list.save
     respond_with(todo_list)
   end
 

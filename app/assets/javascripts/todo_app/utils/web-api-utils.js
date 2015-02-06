@@ -41,6 +41,19 @@ function deleteData(url) {
   })
   return result;
 }
+function putData(url,data){
+    var result = false;
+    jQuery.ajax({
+        type: 'PUT',
+        url: url,
+        data: data,
+        success: function (data) {
+            result = data;
+        },
+        async: false
+    })
+    return result;
+}
 
 module.exports = {
     getAllTodoLists: function () {
@@ -66,5 +79,9 @@ module.exports = {
     deleteTodoListItem: function (id, todoListId) {
         var url = '/todo_lists/' + todoListId + '/todo_list_items/' + id + '.json'
         return deleteData(url);
+    },
+    updateList: function (id,name) {
+        var url = '/todo_lists/' + id + '.json';
+        return putData(url, {todo_list:{name: name}});
     }
 }

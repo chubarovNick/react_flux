@@ -28,5 +28,17 @@ module.exports = {
           id: id
         })
       }
+    },
+    editList: function (id, name) {
+        var newTodoList = WebApiUtils.updateList(id, name);
+        if (newTodoList){
+            TodoAppDispatcher.handleViewAction(
+                {
+                    type: ActionTypes.EDIT_TODO_LIST,
+                    todoList: newTodoList
+                }
+            )
+        }
+
     }
 }
