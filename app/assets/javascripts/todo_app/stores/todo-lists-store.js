@@ -70,6 +70,12 @@ TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
             delete _todoLists[action.id];
             TodoListsStore.emitChange();
             break;
+        case ActionTypes.FAYE_ACTION:
+            if (action.channel == '/todo_lists'){
+                _todoLists[action.data.id] =  action.data;
+                TodoListsStore.emitChange();
+            }
+            break;
         default:
 
     }

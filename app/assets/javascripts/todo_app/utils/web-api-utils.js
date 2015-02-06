@@ -1,3 +1,7 @@
+var FayeAppUtils = require('../../todo_app/utils/faye-api-utils');
+var FayeActions = require('../../todo_app/actions/faye-action-creator')
+
+
 function requestData(url) {
     var result;
     jQuery.ajax({
@@ -8,6 +12,9 @@ function requestData(url) {
             var channels = JSON.parse(rawChanels);
             for (var i = 0; i < channels.length; i++) {
                 Thunderer.sign(channels[i]);
+                FayeAppUtils.addListner(channels[i].channel, function (data, channel) {
+                    FayeActions.emitFaye(data, channel);
+                })
             }
         },
         async: false

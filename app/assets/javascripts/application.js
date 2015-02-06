@@ -14,9 +14,10 @@
 //= require jquery_ujs
 //= require underscore
 //= require jquery.rest
-//= require faye
+//= require faye-browser
 //= require thunderer
 //= require_tree .
+
 $(document).ready(function () {
     var TodoApp = require('./todo_app/components/todo-app.react');
     var TodoListStore = require('./todo_app/stores/todo-lists-store');

@@ -8,7 +8,7 @@ module.exports = {
         EDIT_TODO_LIST: null,
         DELETE_TODO_LIST: null,
         RECEIVE_ALL_TODO_LISTS: null,
-
+        FAYE_ACTION: null,
         RECEIVE_ALL_TODO_LIST_ITEMS: null,
         CREATE_TODO_LIST_ITEM: null,
         DELETE_TODO_LIST_ITEM: null,
