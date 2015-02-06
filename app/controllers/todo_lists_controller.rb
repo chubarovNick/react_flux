@@ -1,6 +1,8 @@
 class TodoListsController < ApplicationController
+  include Thunderer::ControllerAdditions
   expose(:todo_lists)
   expose(:todo_list,config: :strong, attributes: :list_params)
+  thunderer_channels '/todo_lists'
 
   respond_to :html, :json
 
