@@ -46,36 +46,31 @@ function _addTodoLists(lists){
 TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
     var action = payload.action;
     switch (action.type) {
-        case ActionTypes.CLICK_TODO_LIST:
-            if (action.todoListId == _cuurentListItemId){
+        case ActionTypes.TODO_LIST_CLICK:
+            if (action.data.id == _cuurentListItemId){
                 _cuurentListItemId = undefined;
             }else{
-                _cuurentListItemId = action.todoListId;
+                _cuurentListItemId = action.data.id;
             }
             TodoListsStore.emitChange();
             break;
-        case ActionTypes.CREATE_TODO_LIST:
-            _todoLists[action.todoList.id] = action.todoList;
+        case ActionTypes.TODO_LIST_CREATE:
+            _todoLists[action.data.id] = action.data;
             TodoListsStore.emitChange();
             break;
-        case ActionTypes.EDIT_TODO_LIST:
-            _todoLists[action.todoList.id] = action.todoList;
+        case ActionTypes.TODO_LIST_UPDATE:
+            _todoLists[action.data.id] = action.data;
             TodoListsStore.emitChange();
             break;
         case ActionTypes.RECEIVE_ALL_TODO_LISTS:
             _addTodoLists(payload.rawLists);
             TodoListsStore.emitChange();
             break;
-        case ActionTypes.DELETE_TODO_LIST:
-            delete _todoLists[action.id];
+        case ActionTypes.TODO_LIST_DESTROY:
+            delete _todoLists[action.data.id];
             TodoListsStore.emitChange();
             break;
-        case ActionTypes.FAYE_ACTION:
-            if (action.channel == '/todo_lists'){
-                _todoLists[action.data.id] =  action.data;
-                TodoListsStore.emitChange();
-            }
-            break;
+
         default:
 
     }

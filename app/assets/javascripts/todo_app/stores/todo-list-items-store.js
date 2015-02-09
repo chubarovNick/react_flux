@@ -29,19 +29,19 @@ var TodoListItemsStore = assign({}, EventEmitter.prototype, {
 TodoListItemsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
     var action = payload.action;
     switch (action.type) {
-        case ActionTypes.CLICK_TODO_LIST:
+        case ActionTypes.TODO_LIST_CLICK:
             _todoListItems = {};
             action.todoListItems.forEach(function(item){
                _todoListItems[item.id] = item;
             });
             TodoListItemsStore.emitChange();
             break;
-        case ActionTypes.CREATE_TODO_LIST_ITEM:
-            _todoListItems[action.todoListItem.id] = action.todoListItem;
+        case ActionTypes.TODO_LIST_ITEM_CREATE:
+            _todoListItems[action.data.id] = action.data;
             TodoListItemsStore.emitChange();
             break;
-        case ActionTypes.DELETE_TODO_LIST_ITEM:
-            delete _todoListItems[action.id];
+        case ActionTypes.TODO_LIST_ITEM_DESTROY:
+            delete _todoListItems[action.data.id];
             TodoListItemsStore.emitChange();
             break;
         default:

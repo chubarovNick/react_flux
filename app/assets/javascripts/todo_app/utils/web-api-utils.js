@@ -13,7 +13,7 @@ function requestData(url) {
             for (var i = 0; i < channels.length; i++) {
                 Thunderer.sign(channels[i]);
                 FayeAppUtils.addListner(channels[i].channel, function (data, channel) {
-                    FayeActions.emitFaye(data, channel);
+                    FayeActions.emitFaye(data);
                 })
             }
         },

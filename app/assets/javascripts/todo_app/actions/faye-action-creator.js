@@ -4,10 +4,10 @@ var ActionTypes = TodoConstants.ActionTypes;
 
 module.exports ={
     emitFaye: function (data, channel) {
+        var actionType = ActionTypes[data.event];
         TodoAppDispatcher.handleServerAction({
-            type: ActionTypes.FAYE_ACTION,
-            data: data,
-            channel: channel
+            type: actionType,
+            data: data.item
         })
     }
-}
+};

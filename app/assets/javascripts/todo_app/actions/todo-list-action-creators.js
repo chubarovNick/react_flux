@@ -4,38 +4,38 @@ var ActionTypes = TodoConstants.ActionTypes;
 var WebApiUtils = require('../../todo_app/utils/web-api-utils');
 
 module.exports = {
-    clickList: function(listId){
+    clickList: function (listId) {
         var todoListItems = WebApiUtils.getAllTodoListItems(listId);
         TodoAppDispatcher.handleViewAction({
-            type: ActionTypes.CLICK_TODO_LIST,
-            todoListId: listId,
+            type: ActionTypes.TODO_LIST_CLICK,
+            data: {id: listId},
             todoListItems: todoListItems
         })
     },
     create: function (text) {
-      var todoList = WebApiUtils.createTodoList(text);
-      TodoAppDispatcher.handleViewAction({
-        type: ActionTypes.CREATE_TODO_LIST,
-        todoList: todoList
-      })
+        var todoList = WebApiUtils.createTodoList(text);
+        TodoAppDispatcher.handleViewAction({
+            type: ActionTypes.TODO_LIST_CREATE,
+            data: todoList
+        })
     },
     destroy: function (id) {
-      var success = WebApiUtils.destroyTodoList(id);
+        var success = WebApiUtils.destroyTodoList(id);
 
-      if (success){
-        TodoAppDispatcher.handleViewAction({
-          type: ActionTypes.DELETE_TODO_LIST,
-          id: id
-        })
-      }
+        if (success) {
+            TodoAppDispatcher.handleViewAction({
+                type: ActionTypes.TODO_LIST_DESTROY,
+                data: {id: id}
+            })
+        }
     },
     editList: function (id, name) {
         var newTodoList = WebApiUtils.updateList(id, name);
-        if (newTodoList){
+        if (newTodoList) {
             TodoAppDispatcher.handleViewAction(
                 {
-                    type: ActionTypes.EDIT_TODO_LIST,
-                    todoList: newTodoList
+                    type: ActionTypes.TODO_LIST_UPDATE,
+                    data: newTodoList
                 }
             )
         }

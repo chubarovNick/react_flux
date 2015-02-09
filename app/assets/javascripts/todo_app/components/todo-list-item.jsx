@@ -9,7 +9,7 @@ var TodoListItem = React.createClass({
     },
     render: function () {
         return (
-            <li key={this.props.listItem.id} className="todo-list-item">
+            <li className="todo-list-item">
 
                 <div className='panel panel-default' >
                     <div className="panel-body">

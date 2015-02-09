@@ -6,23 +6,23 @@ var ActionTypes = TodoConstants.ActionTypes;
 module.exports = {
     saveTodoListItems: function(todoListItem){
         TodoAppDispatcher.handleViewAction({
-            type: ActionTypes.CLICK_TODO_LIST,
-            todoListId: listId
+            type: ActionTypes.TODO_LIST_CLICK,
+            todoListId: todoListItem
         })
     },
-    cerateTodoListItem: function(name, todoListId){
+    createTodoListItem: function(name, todoListId){
       var listItem = WebApiUtils.createTodoListItem(name, todoListId);
       TodoAppDispatcher.handleViewAction({
-        type: ActionTypes.CREATE_TODO_LIST_ITEM,
-        todoListItem: listItem
+        type: ActionTypes.TODO_LIST_ITEM_CREATE,
+        data: listItem
       })
     },
     deleteTodoListItem: function(id, todoListId){
       var result = WebApiUtils.deleteTodoListItem(id, todoListId);
       if (result) {
         TodoAppDispatcher.handleViewAction({
-          type: ActionTypes.DELETE_TODO_LIST_ITEM,
-          id: id
+          type: ActionTypes.TODO_LIST_ITEM_DESTROY,
+          data: {id: id}
         })
       }
     }

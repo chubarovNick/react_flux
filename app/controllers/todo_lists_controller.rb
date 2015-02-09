@@ -8,17 +8,18 @@ class TodoListsController < ApplicationController
 
   def create
     list = TodoList.create(list_params)
+    ReactTodo::FayePublishing.publish_create(list, '/todo_lists')
     respond_with(list)
   end
 
   def destroy
     todo_list = TodoList.find(params[:id])
-    todo_list.destroy
+    ReactTodo::FayePublishing.publish_destroy(todo_list, '/todo_lists') if todo_list.destroy
     respond_with(todo_list)
   end
 
   def update
-    todo_list.save
+    ReactTodo::FayePublishing.publish_update(todo_list, '/todo_lists')  if todo_list.save
     respond_with(todo_list)
   end
 
