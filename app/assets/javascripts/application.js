@@ -16,10 +16,9 @@
 //= require jquery.rest
 //= require faye-browser
 //= require thunderer
-//= require_tree .
 
 $(document).ready(function () {
-    var TodoApp = require('./todo_app/components/todo-app.react');
+    var TodoApp = require('./todo_app/components/todo-app');
     var TodoListStore = require('./todo_app/stores/todo-lists-store');
     TodoListStore.init()
     var React = require('react');

@@ -1,7 +1,7 @@
-var TodoAppDispatcher = require('todo_app/dispatcher/todo-app-dispatcher');
-var TodoConstants = require('todo_app/constants/todo-app-constants');
+var TodoAppDispatcher = require('../../todo_app/dispatcher/todo-app-dispatcher');
+var TodoConstants = require('../../todo_app/constants/todo-app-constants');
 var ActionTypes = TodoConstants.ActionTypes;
-var WebApiUtils = require('todo_app/utils/web-api-utils');
+var WebApiUtils = require('../../todo_app/utils/web-api-utils');
 
 module.exports = {
     clickList: function(listId){

@@ -22,7 +22,7 @@ module ReactTodo
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
-    config.browserify_rails.commandline_options = "-t reactify --extension=\".react.js\" --fast"
+    config.browserify_rails.commandline_options = "-t reactify --extension=\".jsx\" --fast"
 
   end
 end
