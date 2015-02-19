@@ -15,6 +15,8 @@ gem 'sprockets-commonjs'
 gem 'responders', '~> 2.0'
 gem 'thunderer', '1.0.0'
 gem 'thin'
+gem 'react-rails', '~> 0.9.0.0'
+
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap'
   gem 'rails-assets-object-assign'

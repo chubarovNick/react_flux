@@ -16,14 +16,14 @@ ActiveRecord::Schema.define(version: 20141129185604) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "todo_list_items", force: true do |t|
+  create_table "todo_list_items", force: :cascade do |t|
     t.string   "text"
     t.integer  "todo_list_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
-  create_table "todo_lists", force: true do |t|
+  create_table "todo_lists", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
