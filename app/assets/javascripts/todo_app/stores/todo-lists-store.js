@@ -10,9 +10,12 @@ var _cuurentListItemId;
 
 var TodoListsStore = assign({}, EventEmitter.prototype, {
     init: function () {
-        var seerverLists = WebApiUtils.getAllTodoLists().forEach(function (list) {
-            _todoLists[list.id] = list
-        });
+        WebApiUtils.getAllTodoLists().then(function (lists) {
+            lists.forEach(function (list) {
+                _todoLists[list.id] = list
+            });
+            TodoListsStore.emitChange();
+        })
     },
     emitChange: function () {
         this.emit(CHANGE_EVENT);
@@ -29,27 +32,27 @@ var TodoListsStore = assign({}, EventEmitter.prototype, {
     getAll: function () {
         return _todoLists;
     },
-    getCurrentId: function (){
+    getCurrentId: function () {
         return _cuurentListItemId;
     }
 });
 
 
-function _addTodoLists(lists){
-  lists.forEach(function (list) {
-     if(!_todoLists[list.id]){
-         _todoLists[list.id] = list;
-     }
-  });
+function _addTodoLists(lists) {
+    lists.forEach(function (list) {
+        if (!_todoLists[list.id]) {
+            _todoLists[list.id] = list;
+        }
+    });
 };
 
 TodoListsStore.dispatchToken = TodoAppDispatcher.register(function (payload) {
     var action = payload.action;
     switch (action.type) {
         case ActionTypes.TODO_LIST_CLICK:
-            if (action.data.id == _cuurentListItemId){
+            if (action.data.id == _cuurentListItemId) {
                 _cuurentListItemId = undefined;
-            }else{
+            } else {
                 _cuurentListItemId = action.data.id;
             }
             TodoListsStore.emitChange();

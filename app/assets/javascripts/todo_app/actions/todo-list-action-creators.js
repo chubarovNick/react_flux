@@ -5,40 +5,41 @@ var WebApiUtils = require('../../todo_app/utils/web-api-utils');
 
 module.exports = {
     clickList: function (listId) {
-        var todoListItems = WebApiUtils.getAllTodoListItems(listId);
-        TodoAppDispatcher.handleViewAction({
-            type: ActionTypes.TODO_LIST_CLICK,
-            data: {id: listId},
-            todoListItems: todoListItems
+        WebApiUtils.getAllTodoListItems(listId).then(function (todoListItems) {
+            TodoAppDispatcher.handleViewAction({
+                type: ActionTypes.TODO_LIST_CLICK,
+                data: {id: listId},
+                todoListItems: todoListItems
+            })
         })
     },
     create: function (text) {
-        var todoList = WebApiUtils.createTodoList(text);
-        TodoAppDispatcher.handleViewAction({
-            type: ActionTypes.TODO_LIST_CREATE,
-            data: todoList
+        WebApiUtils.createTodoList(text).then(function (todoList) {
+            TodoAppDispatcher.handleViewAction({
+                type: ActionTypes.TODO_LIST_CREATE,
+                data: todoList
+            })
         })
+
     },
     destroy: function (id) {
-        var success = WebApiUtils.destroyTodoList(id);
+        WebApiUtils.destroyTodoList(id).then(function () {
+                TodoAppDispatcher.handleViewAction({
+                    type: ActionTypes.TODO_LIST_DESTROY,
+                    data: {id: id}
+                })
+            }
+        );
 
-        if (success) {
-            TodoAppDispatcher.handleViewAction({
-                type: ActionTypes.TODO_LIST_DESTROY,
-                data: {id: id}
-            })
-        }
     },
     editList: function (id, name) {
-        var newTodoList = WebApiUtils.updateList(id, name);
-        if (newTodoList) {
+        WebApiUtils.updateList(id, name).then(function (newTodoList) {
             TodoAppDispatcher.handleViewAction(
                 {
                     type: ActionTypes.TODO_LIST_UPDATE,
                     data: newTodoList
                 }
             )
-        }
-
+        })
     }
-}
+};
