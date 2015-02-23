@@ -3,16 +3,17 @@ var React = require('react');
 var TodoLists = require('./todo-lists');
 var TodoListItems = require('./todo-list-items')
 
-var TodoApp = React.createClass({
-    render: function () {
+class TodoApp extends React.Component {
+    render() {
+
         return (
             <div class="todo-app">
-                <TodoLists/>
-                <TodoListItems/>
+                <TodoLists></TodoLists>
+                <TodoListItems></TodoListItems>
             </div>
         );
     }
-});
+}
 
 module.exports = TodoApp;
 
