@@ -1,4 +1,3 @@
-/** @jsx React.DOM */
 var React = require('react');
 var TodoLists = require('./todo-lists');
 var TodoListItems = require('./todo-list-items')
